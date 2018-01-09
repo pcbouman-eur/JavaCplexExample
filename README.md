@@ -2,9 +2,9 @@
 This repository contains example code for a small Java Project that utilizes the [IBM ILOG CPLEX library](https://www.ibm.com/products/ilog-cplex-optimization-studio)
 to solve instances of the Precendence Constrained Knapsack Problem. 
 
-The Precendence Constrained Knapsack Problem is a variant of the regular Knapsack Problems where we have items *I*, where for each item *i* we have a profit *p~i* and a weight *w~i*.
-Furthermore, there is a capacity*b* and a directed graph *G = (I,A)* defined on the items. The objective is to select a set of items *S &sube; I*, such that the sum of*p~i* over *i &isin; S* is maximized,
-while the sum of *w~i* over *i &isin; S* is smaller than or equal to *b*. Additionally, an item *i* can only be in *S* if all items *j* for which *A* contains an arc *(i,j)* are also in *S*.
+The Precendence Constrained Knapsack Problem is a variant of the regular Knapsack Problems where we have items *I*, where for each item *i* we have a profit *p<sub>i</sub>* and a weight *w<sub>i</sub>*.
+Furthermore, there is a capacity*b* and a directed graph *G = (I,A)* defined on the items. The objective is to select a set of items *S &sube; I*, such that the sum of*p<sub>i</sub>* over *i &isin; S* is maximized,
+while the sum of *w<sub>i</sub>* over *i &isin; S* is smaller than or equal to *b*. Additionally, an item *i* can only be in *S* if all items *j* for which *A* contains an arc *(i,j)* are also in *S*.
 
 The code in this repository consists of the following files:
 * `DirectedGraph.java`  contains a general purpose data structure for directed graphs. It provides methods to add nodes and arcs, and allows us to attach arbitrary data types to the nodes and arcs.
