@@ -12,6 +12,11 @@ The code in this repository consists of the following files:
 * `Item.java` models a knapsack item, without its precendence constraints (these are modelled in the project using a DirectedGraph object).
 * `Model.java` manages a CPLEX integer linear programming model, converting a directed graph with a precendence constrained knapsack problem and a capacity to a CPLEX model that can be solved.
 * `Main.java` is used to read in an instance of the problem from a text file, convert it to a directed graph, and call the `Model` class to solve the instance.
+
+More detailed documentation of these classes can be found in the [Javadocs of this project](https://pcbouman-eur.github.io/JavaCplexExample/javadoc/).
+
+For a general explanation of using CPLEX from Java the repository contains some [lecture slides](https://pcbouman-eur.github.io/JavaCplexExample/cplex_lecture.pdf).
+There is also a [series of four YouTube videos](https://www.youtube.com/watch?v=C4YDrVT3fcg&list=PLrX1UIgv0C_4V5Xx6IIWj0U8i-4JN6F1g) in which this project is implemented.
  
 # Using CPLEX
 
@@ -33,6 +38,7 @@ If you only need CPLEX, the easiest way to include it in an Eclipse project is t
 4. Press `Add JARs` and select the `cplex.jar` file from the lib folder.
 5. Click on the `>` symbol in front of `cplex.jar`, select `Native Library Location` and click `Edit`. Click `Workspace` and select the `lib` folder that contains the native library.
 
+There is a [YouTube video](https://youtu.be/C4YDrVT3fcg) that shows these steps.
 
 ## Adding CPLEX via Maven
 
