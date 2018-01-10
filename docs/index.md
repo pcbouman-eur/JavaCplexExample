@@ -12,5 +12,6 @@ This is a project page for a small example project that showcases how to use CPL
 
 * View the [github repository](https://github.com/pcbouman-eur/JavaCplexExample) which has a more in-depth explanation.
 * You can look at the code [the code](https://github.com/pcbouman-eur/JavaCplexExample/tree/master/src) of this project, as well as an [example instance file](https://github.com/pcbouman-eur/JavaCplexExample/blob/master/instance.txt). You can [download a zip file](https://github.com/pcbouman-eur/JavaCplexExample/archive/master.zip) with the latest files.
+* There are [lecture slides](./cplex_lecture.pdf) with some background information and the most important ideas of this example project.
 * You can view the [javadoc documentation](./javadoc) of this example project.
 
