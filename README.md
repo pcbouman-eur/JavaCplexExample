@@ -23,6 +23,47 @@ Students who do not have these files can obtain the full [IBM ILOG CPLEX Optimiz
 
 After installing the IBM ILOG CPLEX Optimization Studio, you can find the .jar file in `cplex/lib` relative to the installation folder of the software. The native library can be found in `cplex/bin/x64_win64` on Windows installations, and similar locations on MacOS or Linux.
 
+## Adding CPLEX to an Eclipse Project
+
+If you only need CPLEX, the easiest way to include it in an Eclipse project is to just add it is a library to the project. You can take the following steps to do this:
+
+1. Create a directory `lib` in the root of your project and copy `cplex.jar` and the native library file there.
+1. Go to the project properties, which can be access by right clicking on your project folder or via the Project menu in the menu bar.
+3. Go to the Java Build Path option and select the `Libraries` tab.
+4. Press `Add JARs` and select the `cplex.jar` file from the lib folder.
+5. Click on the `>` symbol in front of `cplex.jar`, select `Native Library Location` and click `Edit`. Click `Workspace` and select the `lib` folder that contains the native library.
+
+
+## Adding CPLEX via Maven
+
+If you have the full IBM ILOG CPLEX Optimization Studio installed, you can also add CPLEX as a [Maven](https://maven.apache.org/) dependency. 
+
+```
+<dependency>
+   <groupId>cplex</groupId>
+   <artifactId>cplex</artifactId>
+   <version>YY.Y.Y</version>
+   <scope>system</scope>
+   <systemPath>${env.CPLEX_STUDIO_DIRYYYY}/cplex/lib/cplex.jar</systemPath>
+</dependency>
+```
+
+Note that you have to replace the Y's with the proper CPLEX version. For CPLEX 12.6.3, the snippet would be:
+
+```
+<dependency>
+   <groupId>cplex</groupId>
+   <artifactId>cplex</artifactId>
+   <version>12.6.3</version>
+   <scope>system</scope>
+   <systemPath>${env.CPLEX_STUDIO_DIR1263}/cplex/lib/cplex.jar</systemPath>
+</dependency>
+```
+This approach assumes that a system environment variable `CPLEX_STUDIO_DIRYYYY` exists and that the CPLEX
+binaries are on the system path. For Windows installations of full ILOG CPLEX Optimization Studio this is
+the case and this step is sufficient. I am currently unaware if this works out-of-the-box on MacOS and
+Linux as well.
+
 ## Further Reading
 
 It is highly recommended to have a look at the [Java CPLEX Reference Documentation](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refjavacplex/html/index.html) to discover what methods are available for a `IloCplex` modelling object. Be sure to have a look at [the documentation of the](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refjavacplex/html/ilog/cplex/IloCplexModeler.html) `IloCplexModeler` class, which is a superclass of the `IloCplex` class you typically use to build a model in Java. In particular, the `addEq()`, `addLe()` and `addGe()` are important for the modelling of constraints, the `addMaximize()` and `addMinimize()` methodes are important for the modelling of the objective, and `sum()` and `prod()` are important for building mathematical expressions in CPLEX. It is also recommended to review [the documentation of](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/refjavacplex/html/ilog/cplex/IloCplex.html) the `IloCplex` class, in particular the `solve()`, `getValue()`, `getObjValue()`, `exportModel()` and `setOut()` methods are important. Furthermore, you can finetune the advanced settings of CPLEX the `setParam()` methods if you desire. IBM provides a [list of available parameters](https://www.ibm.com/support/knowledgecenter/SSSA5P_12.8.0/ilog.odms.cplex.help/CPLEX/Parameters/topics/introListAlpha.html).
