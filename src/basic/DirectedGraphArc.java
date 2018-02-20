@@ -1,3 +1,4 @@
+package basic;
 /**
  * Class that models arcs in the directed arcs. Stores both the end-points,
  * as well as the data associated with the arc.

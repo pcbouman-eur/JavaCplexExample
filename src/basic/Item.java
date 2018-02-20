@@ -1,4 +1,4 @@
-
+package basic;
 /**
  * Class that models a knapsack item with a profit and a weight
  * @author Paul Bouman
