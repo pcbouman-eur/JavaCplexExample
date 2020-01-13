@@ -56,7 +56,7 @@ If you only need CPLEX, the easiest way to include it in an Eclipse project is t
 1. Create a directory `lib` in the root of your project and copy `cplex.jar` and the native library file there.
 1. Go to the project properties, which can be access by right clicking on your project folder or via the Project menu in the menu bar.
 3. Go to the Java Build Path option and select the `Libraries` tab.
-4. Press `Add JARs` and select the `cplex.jar` file from the lib folder.
+4. Press `Add JARs` and select the `cplex.jar` file from the lib folder. For projects configured for Java versions up to 8, there is only a classpath to which the library will be automatically added. If you have a Java 9+ project, you need to take care it is added to the classpath (not the module path) and make sure your project has no `module-info.java` file (delete it if you created it).
 5. Click on the `>` symbol in front of `cplex.jar`, select `Native Library Location` and click `Edit`. Click `Workspace` and select the `lib` folder that contains the native library.
 
 There is a [YouTube video](https://youtu.be/C4YDrVT3fcg) that shows these steps.
