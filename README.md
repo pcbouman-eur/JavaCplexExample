@@ -1,5 +1,5 @@
 # Java and CPLEX example project: Precendence Constrained Knapsack Problem (basic package)
-This repository contains example code for a small Java Project that utilizes the [IBM ILOG CPLEX library](https://developer.ibm.com/docloud/blog/2019/07/04/cplex-optimization-studio-for-students-and-academics/)
+This repository contains example code for a small Java Project that utilizes the [IBM ILOG CPLEX library](https://www.ibm.com/academic/topic/data-science) (*on that webpage you can access it under 'Software'*)
 to solve instances of the Precendence Constrained Knapsack Problem. This code is available in the `basic` package and folder of this repository. 
 
 The Precendence Constrained Knapsack Problem is a variant of the regular Knapsack Problems where we have items *I*, where for each item *i* we have a profit *p<sub>i</sub>* and a weight *w<sub>i</sub>*.
@@ -45,7 +45,7 @@ Currently, all documentation of this example is only provided within the source 
 
 For this example to work, you need to have a working version of the CPLEX Java Library `cplex.jar` and the native library. The native libary is called `cplexYYYY.dll` on Windows, `libcplexYYYY.jnilib` on MacOS and `libcplexYYYY.so` on Linux, where `YYYY` is replaced by the version of your CPLEX library (e.g. 1263).
 
-Students who do not have these files can obtain the full [IBM ILOG CPLEX Optimization Studio](https://developer.ibm.com/docloud/blog/2019/07/04/cplex-optimization-studio-for-students-and-academics/) from IBM for free using a student account.
+Students who do not have these files can obtain the full [IBM ILOG CPLEX Optimization Studio](https://www.ibm.com/academic/topic/data-science) from IBM for free using a student account (*on that webpage you can access it under 'Software'*).
 
 After installing the IBM ILOG CPLEX Optimization Studio, you can find the .jar file in `cplex/lib` relative to the installation folder of the software. The native library can be found in `cplex/bin/x64_win64` on Windows installations, and similar locations on MacOS or Linux.
 
